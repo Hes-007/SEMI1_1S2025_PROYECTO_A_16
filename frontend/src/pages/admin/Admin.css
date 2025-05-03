@@ -1,0 +1,428 @@
+/* Admin styles with dark theme */
+.admin-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1.5rem;
+}
+
+.admin-header {
+  margin-bottom: 2.5rem;
+}
+
+.admin-title {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--primary-light);
+  margin-bottom: 0.5rem;
+  background: linear-gradient(45deg, var(--primary-light), var(--secondary-color));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.admin-subtitle {
+  color: var(--text-secondary);
+  font-size: 1rem;
+}
+
+/* Admin tabs */
+.admin-tabs {
+  display: flex;
+  margin-bottom: 2rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.admin-tab {
+  padding: 0.875rem 1.5rem;
+  cursor: pointer;
+  color: var(--text-secondary);
+  border-bottom: 2px solid transparent;
+  transition: var(--transition);
+  font-weight: 500;
+}
+
+.admin-tab:hover {
+  color: var(--text-primary);
+}
+
+.admin-tab.active {
+  color: var(--primary-light);
+  border-bottom-color: var(--primary-color);
+}
+
+/* Admin cards */
+.admin-card {
+  background-color: var(--card-bg);
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  border: 1px solid var(--border-color);
+}
+
+.admin-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.25rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.admin-card-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+.admin-card-body {
+  margin-bottom: 1rem;
+}
+
+/* Admin tables */
+.admin-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  margin-bottom: 1.5rem;
+  border-radius: var(--border-radius);
+  overflow: hidden;
+}
+
+.admin-table th,
+.admin-table td {
+  padding: 0.75rem 1rem;
+  text-align: left;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.admin-table th {
+  background-color: rgba(0, 0, 0, 0.2);
+  font-weight: 600;
+  color: var(--text-primary);
+  border-top: 1px solid var(--border-color);
+}
+
+.admin-table th:first-child {
+  border-top-left-radius: var(--border-radius);
+}
+
+.admin-table th:last-child {
+  border-top-right-radius: var(--border-radius);
+}
+
+.admin-table tr:last-child td:first-child {
+  border-bottom-left-radius: var(--border-radius);
+}
+
+.admin-table tr:last-child td:last-child {
+  border-bottom-right-radius: var(--border-radius);
+}
+
+.admin-table tbody tr {
+  background-color: var(--card-bg);
+  transition: background-color 0.2s ease;
+}
+
+.admin-table tbody tr:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+.admin-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.admin-table-actions {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: flex-end;
+}
+
+/* Admin stats */
+.admin-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.25rem;
+  margin-bottom: 2rem;
+}
+
+.admin-stat-card {
+  background-color: var(--card-bg);
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  padding: 1.5rem;
+  text-align: center;
+  border: 1px solid var(--border-color);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.admin-stat-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.admin-stat-value {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--primary-light);
+  margin-bottom: 0.5rem;
+}
+
+.admin-stat-label {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+}
+
+/* Admin forms */
+.admin-form {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1.25rem;
+  margin-bottom: 1.5rem;
+}
+
+.admin-form-full {
+  grid-column: 1 / -1;
+}
+
+.admin-form-actions {
+  grid-column: 1 / -1;
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+/* Admin empty states */
+.admin-empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem 1.5rem;
+  text-align: center;
+  background-color: var(--bg-dark);
+  border-radius: var(--border-radius);
+  color: var(--text-secondary);
+  border: 1px dashed var(--border-color);
+}
+
+.admin-empty-icon {
+  font-size: 3rem;
+  margin-bottom: 1.25rem;
+  opacity: 0.5;
+}
+
+.admin-empty-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+  color: var(--text-primary);
+}
+
+.admin-empty-text {
+  max-width: 500px;
+  margin-bottom: 1.5rem;
+  color: var(--text-secondary);
+}
+
+/* Admin loading */
+.admin-loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 3rem 0;
+}
+
+/* Status badges */
+.status-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.25rem 0.75rem;
+  border-radius: 1rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.status-badge::before {
+  content: '';
+  display: inline-block;
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  margin-right: 0.5rem;
+}
+
+.status-active {
+  background-color: rgba(40, 167, 69, 0.15);
+  color: #28a745;
+}
+
+.status-active::before {
+  background-color: #28a745;
+}
+
+.status-inactive {
+  background-color: rgba(108, 117, 125, 0.15);
+  color: #adb5bd;
+}
+
+.status-inactive::before {
+  background-color: #adb5bd;
+}
+
+.status-pending {
+  background-color: rgba(255, 193, 7, 0.15);
+  color: #ffc107;
+}
+
+.status-pending::before {
+  background-color: #ffc107;
+}
+
+.status-rejected {
+  background-color: rgba(220, 53, 69, 0.15);
+  color: #dc3545;
+}
+
+.status-rejected::before {
+  background-color: #dc3545;
+}
+
+/* Chart containers */
+.admin-chart-container {
+  background-color: var(--card-bg);
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  padding: 1rem;
+  height: 300px;
+  margin-bottom: 1.5rem;
+}
+
+/* Admin tabs - better styling */
+.admin-panel-tabs {
+  display: flex;
+  border-bottom: 1px solid var(--border-color);
+  margin-bottom: 2rem;
+  overflow-x: auto;
+  scrollbar-width: none; /* Firefox */
+}
+
+.admin-panel-tabs::-webkit-scrollbar {
+  display: none; /* Chrome/Safari/Opera */
+}
+
+.admin-panel-tab {
+  padding: 0.75rem 1.5rem;
+  color: var(--text-secondary);
+  font-weight: 500;
+  border-bottom: 2px solid transparent;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 0.2s ease;
+}
+
+.admin-panel-tab:hover {
+  color: var(--text-primary);
+}
+
+.admin-panel-tab.active {
+  color: var(--primary-light);
+  border-bottom-color: var(--primary-color);
+}
+
+/* Admin action buttons */
+.admin-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.4rem 1rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  border-radius: var(--border-radius);
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  gap: 0.5rem;
+}
+
+.admin-btn-approve {
+  background-color: rgba(40, 167, 69, 0.15);
+  color: #28a745;
+  border: 1px solid rgba(40, 167, 69, 0.3);
+}
+
+.admin-btn-approve:hover {
+  background-color: rgba(40, 167, 69, 0.25);
+}
+
+.admin-btn-reject {
+  background-color: rgba(220, 53, 69, 0.15);
+  color: #dc3545;
+  border: 1px solid rgba(220, 53, 69, 0.3);
+}
+
+.admin-btn-reject:hover {
+  background-color: rgba(220, 53, 69, 0.25);
+}
+
+.admin-btn-action {
+  background-color: rgba(23, 162, 184, 0.15);
+  color: #17a2b8;
+  border: 1px solid rgba(23, 162, 184, 0.3);
+}
+
+.admin-btn-action:hover {
+  background-color: rgba(23, 162, 184, 0.25);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .admin-stats {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  }
+  
+  .admin-table-responsive {
+    overflow-x: auto;
+  }
+  
+  .admin-table th,
+  .admin-table td {
+    padding: 0.5rem 0.75rem;
+  }
+  
+  .admin-form {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Chart customization for dark theme */
+.recharts-cartesian-grid-horizontal line,
+.recharts-cartesian-grid-vertical line {
+  stroke: rgba(255, 255, 255, 0.1);
+}
+
+.recharts-xAxis .recharts-cartesian-axis-line,
+.recharts-yAxis .recharts-cartesian-axis-line {
+  stroke: rgba(255, 255, 255, 0.2);
+}
+
+.recharts-text {
+  fill: var(--text-secondary);
+}
+
+.recharts-tooltip-item-name,
+.recharts-tooltip-item-value {
+  color: var(--text-primary) !important;
+}
+
+.recharts-default-tooltip {
+  background-color: var(--bg-dark) !important;
+  border: 1px solid var(--border-color) !important;
+}
+
+.recharts-tooltip-cursor {
+  fill: rgba(255, 255, 255, 0.05) !important;
+}
